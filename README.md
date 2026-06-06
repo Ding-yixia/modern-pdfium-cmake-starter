@@ -196,3 +196,48 @@ cmake .. -DPDFIUM_ROOT=/path/to/pdfium -DBUILD_EXAMPLES=ON
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 **The original copyright notice must be retained** in all copies or substantial portions of the Software.
+
+---
+
+## ☕ 支持 / Support
+
+> **「授人以鱼，不如授人以渔」** —— *《老子》*
+>
+> **「滴水之恩，当涌泉相报」** —— *《增广贤文》*
+>
+> **「桃花潭水深千尺，不及汪伦送我情」** —— *李白*
+>
+> 感谢您对此项目的关注。如果本项目对您有所帮助，欢迎请作者喝杯咖啡 ☕
+>
+> Your support keeps this project alive. If you find it useful, feel free to buy me a coffee ☕
+
+| 中文收款码 |
+|:---------:|
+| ![support_me_work.png](image/support_me_work.png) |
+
+### 🌍 世界语言感谢 / Thank You in Many Languages
+
+| 语言 | 文字 | 发音 |
+|------|------|------|
+| 🇨🇳 **中文** | 感谢您的支持！ | Xièxiè nín de zhīchí! |
+| 🇬🇧 **English** | Thank you for your support! | — |
+| 🇫🇷 **Français** | Merci pour votre soutien ! | Mehr-see poor vo-tr soo-tee-ehn |
+| 🇪🇸 **Español** | ¡Gracias por su apoyo! | Grah-see-as por su ah-poh-yo |
+| 🇷🇺 **Русский** | Спасибо за вашу поддержку! | Spa-see-ba za va-shoo pad-derzh-koo |
+| 🇩🇪 **Deutsch** | Vielen Dank für Ihre Unterstützung! | Fee-len Dank fewr Ee-re un-ter-shtet-zung |
+| 🇯🇵 **日本語** | ご支援ありがとうございます | Go-shien a-ri-ga-tou go-za-i-masu |
+| 🇰🇷 **한국어** | 지원해 주셔서 감사합니다 | Ji-won-hae ju-shyeo-seo gam-sa-ham-ni-da |
+| 🇦🇪 **العربية** | شكرا لدعمكم | Shuk-ran li-da-mikum |
+| 🇵🇹 **Português** | Obrigado pelo seu apoio! | Oh-bree-gah-doo peh-loo seh-oo ah-poy-yoo |
+| 🇮🇹 **Italiano** | Grazie per il vostro supporto! | Graht-see-eh per eel voh-stroh soo-por-toh |
+| 🇳🇱 **Nederlands** | Bedankt voor uw steun! | Be-dankt voor ew stun |
+| 🇸🇪 **Svenska** | Tack för ditt stöd! | Tak fur dit stöd |
+| 🇵🇱 **Polski** | Dziękuję za Państwa wsparcie! | Djen-koo-yeh za Pan-stva fspar-cheh |
+| 🇹🇷 **Türkçe** | Desteğiniz için teşekkürler! | Des-teh-ee-niz ee-chehn teh-shek-kewr-ler |
+| 🇻🇳 **Tiếng Việt** | Cảm ơn sự ủng hộ của bạn! | Gam un su ung ho kua ban |
+| 🇮🇳 **हिन्दी** | आपके समर्थन के लिए धन्यवाद | Aap-ke sam-ar-than ke li-ye dhan-yavad |
+| 🇹🇭 **ไทย** | ขอบคุณสำหรับการสนับสนุนของคุณ | Khob-khun sam-rap kan-sa-nap-sa-nun khong-khun |
+
+> *愿知识之光普照人间，代码之力筑梦未来。*
+> *May the light of knowledge illuminate the world, and the power of code build our dreams.*
+> *Que la lumière du savoir éclaire le monde, et la puissance du code construise nos rêves.*
