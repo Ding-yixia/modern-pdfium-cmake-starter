@@ -6,7 +6,92 @@
 
 ## <a name="chinese"></a>中文介绍
 
-**modern-pdfium** 是一个面向现代 C++（C++20）的 [PDFium](https://pdfium.googlesource.com/pdfium/) 封装库。它用 RAII 惯用法、强类型枚举和命名空间将 PDFium 的 C 语言 API 包装为易用且安全的 C++ 接口。
+> ⚠ **仅支持 Windows x64 平台**
+
+## 快速开始
+
+```bash
+# 1. 构建 PDFium（首次需要）
+git clone https://github.com/Ding-yixia/pdfium_cmake_support.git
+cd pdfium_cmake_support
+python build.py --examples
+cd ..
+
+# 2. 构建封装库 + 示例
+git clone https://github.com/Ding-yixia/modern-pdfium-cmake-starter.git
+cd modern-pdfium-cmake-starter
+mkdir build && cd build
+cmake .. -DPDFIUM_ROOT=../pdfium_cmake_support -DBUILD_EXAMPLES=ON -G Ninja
+cmake --build . --parallel
+
+# 3. 运行示例
+./examples/pdfium_basic ../pdfium_cmake_support/test.pdf
+./examples/pdfium_text ../pdfium_cmake_support/test.pdf
+```
+
+## 示例程序
+
+| 示例 | 文件 | 说明 |
+|------|------|------|
+| 📄 basic | `examples/basic.cpp` | 基础文档操作：加载、信息、渲染 |
+| 🔤 text | `examples/text.cpp` | 文本提取：全文、区域、字符详情 |
+| 🔖 bookmark | `examples/bookmark.cpp` | 书签遍历：递归导航、目标页码 |
+| 🖍 annotation | `examples/annotation.cpp` | 注释枚举：类型、位置、颜色 |
+| 🔍 search | `examples/search.cpp` | 文本搜索：关键字查找、URL 提取 |
+| 🖼 render | `examples/render.cpp` | 多页面渲染：缩放、缩略图 |
+
+## 详细文档
+
+➡ **[docs/API.md](docs/API.md)** — 完整 API 参考、使用示例、高级用法
+
+## 封装模块一览
+
+| 模块 | 头文件 | 类 | FPDF 函数数 |
+|------|--------|-----|-----------|
+| 核心库 | `core.h` | `Library` | ~10 |
+| 文档 | `document.h` | `Document` | ~30 |
+| 页面 | `page.h` | `Page` | ~30 |
+| 位图 | `bitmap.h` | `Bitmap` | ~10 |
+| 文本 | `text.h` | `TextPage`, `TextFind`, `WebLinks` | ~30 |
+| 注释 | `annotation.h` | `Annotation` | ~50 |
+| 书签 | `bookmark.h` | `Bookmark`, `Dest`, `Action` | ~15 |
+| 表单 | `form.h` | `FormHandle` | ~20 |
+| 图像 | `image.h` | `ImageObject` | ~15 |
+| 字体 | `font.h` | `Font` | ~15 |
+| 路径 | `path.h` | `PathObject`, `PathSegment` | ~25 |
+| 结构树 | `struct_tree.h` | `StructTree`, `StructElement` | ~30 |
+| 附件 | `attachment.h` | `Attachment` | ~12 |
+| 签名 | `signature.h` | `Signature` | ~8 |
+| 保存 | `save.h` | `Save` | ~3 |
+| 渐进加载 | `dataavail.h` | `Avail`, `PageObject` | ~15 |
+| 链接 | `link.h` | `Link` | ~10 |
+
+## 构建选项
+
+```bash
+cmake .. -DPDFIUM_ROOT=path/to/pdfium  -DBUILD_EXAMPLES=ON  -G Ninja
+```
+
+| 选项 | 默认 | 说明 |
+|------|------|------|
+| `PDFIUM_ROOT` | 空 | PDFium 构建产物路径 |
+| `BUILD_EXAMPLES` | OFF | 构建示例程序 |
+
+## 项目结构
+
+```
+├── include/pdfium/    18 个头文件
+├── src/               16 个实现文件
+├── examples/           6 个示例程序
+├── docs/               API 文档
+├── CMakeLists.txt      构建配置
+├── LICENSE             MIT 协议
+└── README.md           本文件
+```
+
+## 许可
+
+MIT License © 2025 Ding-yixia
 
 ### 特性 / 已封装的模块
 
