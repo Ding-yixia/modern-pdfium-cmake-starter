@@ -201,15 +201,35 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 ## ☕ 支持 / Support
 
-> **「授人以鱼，不如授人以渔」** —— *《老子》*
+> **「落红不是无情物，化作春泥更护花」** —— *龚自珍《己亥杂诗》*
 >
-> **「滴水之恩，当涌泉相报」** —— *《增广贤文》*
+> *"Falling petals are not heartless things; they turn into spring soil to nurture future blooms."*
 >
-> **「桃花潭水深千尺，不及汪伦送我情」** —— *李白*
+> **「随风潜入夜，润物细无声」** —— *杜甫《春夜喜雨》*
 >
-> 感谢您对此项目的关注。如果本项目对您有所帮助，欢迎请作者喝杯咖啡 ☕
+> *"Stealing in with the night breeze, it moistens all things silently."*
 >
-> Your support keeps this project alive. If you find it useful, feel free to buy me a coffee ☕
+> **「采得百花成蜜后，为谁辛苦为谁甜」** —— *罗隐《蜂》*
+>
+> *"After gathering nectar from a hundred flowers, for whom is the toil, for whom the sweetness?"*
+>
+> **"We are like dwarfs sitting on the shoulders of giants"** — *Bernard of Chartres*
+>
+> **"The lamp is not for itself; it gives light to others"** — *Rumi*
+>
+> **"The best way to find yourself is to lose yourself in the service of others"** — *Mahatma Gandhi*
+>
+> **"継続は力なり"** — *日本の諺*
+>
+> *"Persistence is power" — Japanese proverb*
+>
+> ---
+>
+> 感谢您对此项目的关注。代码因分享而美丽，因互助而强大。
+> 如果本项目对您有所帮助，欢迎请作者喝杯咖啡 ☕
+>
+> *Thank you for your interest. Code becomes beautiful through sharing, strong through community.*
+> *If this project has helped you, feel free to buy me a coffee ☕*
 
 | 中文收款码 |
 |:---------:|
