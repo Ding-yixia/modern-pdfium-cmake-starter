@@ -1,0 +1,27 @@
+#pragma once
+
+#include <fpdfview.h>
+#include <fpdf_doc.h>
+#include <fpdf_edit.h>
+#include <fpdf_save.h>
+#include <fpdf_ppo.h>
+#include <fpdf_text.h>
+#include <fpdf_transformpage.h>
+#include <fpdf_flatten.h>
+#include <fpdf_thumbnail.h>
+#include <fpdf_catalog.h>
+#include <fpdf_attachment.h>
+#include <fpdf_signature.h>
+#include <fpdf_javascript.h>
+#include <fpdf_annot.h>
+#include <fpdf_formfill.h>
+
+namespace pdfium {
+
+class Page;
+class TextPage;
+class PageObject;
+class Bitmap;
+class Document;
+
+} // namespace pdfium

@@ -1,0 +1,27 @@
+# Build
+build/
+out/
+cmake-build-*/
+
+# IDE
+.vscode/
+.idea/
+*.user
+*.suo
+
+# Compiled
+*.o
+*.obj
+*.lib
+*.dll
+*.exe
+*.pdb
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
