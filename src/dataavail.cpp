@@ -46,8 +46,8 @@ std::unique_ptr<Document> Avail::GetDocument(const std::string& password) {
     return std::unique_ptr<Document>(new Document(doc));
 }
 
-int Avail::GetFirstPageNum() const {
-    return FPDFAvail_GetFirstPageNum(avail_);
+int Avail::GetFirstPageNum(FPDF_DOCUMENT doc) const {
+    return FPDFAvail_GetFirstPageNum(doc);
 }
 
 bool Avail::IsPageAvail(int page_index) {
@@ -110,7 +110,8 @@ bool PageObject::GetMatrix(FS_MATRIX* matrix) const {
 }
 
 bool PageObject::GetIsActive() const {
-    return FPDFPageObj_GetIsActive(obj_) != 0;
+    FPDF_BOOL active;
+    return FPDFPageObj_GetIsActive(obj_, &active) != 0 && active != 0;
 }
 
 bool PageObject::SetIsActive(bool active) {

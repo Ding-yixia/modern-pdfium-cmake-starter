@@ -33,8 +33,12 @@ class Library {
 public:
     struct Config {
         int version = 2;
-        int user_data_size = 0;
-        const void* user_data = nullptr;
+        const char** m_pUserFontPaths = nullptr;
+        void* m_pIsolate = nullptr;
+        unsigned int m_v8EmbedderSlot = 0;
+        void* m_pPlatform = nullptr;
+        int m_RendererType = 0;
+        int m_FontLibraryType = 0;
     };
 
     Library();

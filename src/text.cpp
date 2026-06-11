@@ -60,12 +60,15 @@ bool TextPage::GetCharOrigin(int index, double* x, double* y) const {
 }
 
 std::wstring TextPage::GetText(int start, int count) const {
-    int buf_len = FPDFText_GetText(text_page_, start, count, nullptr, 0);
-    if (buf_len <= 0) {
+    if (count <= 0) {
         return {};
     }
-    std::vector<unsigned short> buf(static_cast<size_t>(buf_len));
-    FPDFText_GetText(text_page_, start, count, buf.data(), buf_len);
+    std::vector<unsigned short> buf(static_cast<size_t>(count) + 1);
+    int written = FPDFText_GetText(text_page_, start, count, buf.data());
+    if (written <= 0) {
+        return {};
+    }
+    buf.resize(static_cast<size_t>(written));
     // Remove null terminator
     if (!buf.empty() && buf.back() == 0) {
         buf.pop_back();

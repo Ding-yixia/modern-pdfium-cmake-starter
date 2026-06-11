@@ -5,6 +5,9 @@
 
 namespace pdfium {
 
+class Dest;
+class Action;
+
 class Bookmark {
 public:
     Bookmark() = default;
@@ -45,6 +48,8 @@ public:
     explicit operator bool() const { return dest_ != nullptr; }
 private:
     friend class Bookmark;
+    friend class Action;
+    friend class Link;
     friend class Document;
     explicit Dest(FPDF_DEST dest) : dest_(dest) {}
     FPDF_DEST dest_ = nullptr;

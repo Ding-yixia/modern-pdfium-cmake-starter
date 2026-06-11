@@ -135,7 +135,7 @@ int main(int argc, char* argv[]) {
         std::cout << "\n--- Creating a sample text annotation ---\n";
         // Add a new text annotation to the page via FPDF C API
         FPDF_ANNOTATION new_annot_handle =
-            FPDFPage_AddAnnot(page->Handle(), FPDF_ANNOT_TEXT);
+            FPDFPage_CreateAnnot(page->Handle(), FPDF_ANNOT_TEXT);
         if (new_annot_handle) {
             pdfium::Annotation new_annot(new_annot_handle);
 

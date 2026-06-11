@@ -1,6 +1,8 @@
 #pragma once
 #include <memory>
+#include <string>
 #include "types.h"
+#include <fpdf_dataavail.h>
 
 namespace pdfium {
 
@@ -14,7 +16,7 @@ public:
     Avail& operator=(Avail&& other) noexcept;
     bool IsDocAvail();
     std::unique_ptr<Document> GetDocument(const std::string& password = "");
-    int GetFirstPageNum() const;
+    int GetFirstPageNum(FPDF_DOCUMENT doc) const;
     bool IsPageAvail(int page_index);
     bool IsLinearized() const;
     FPDF_AVAIL Handle() const { return avail_; }

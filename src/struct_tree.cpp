@@ -10,7 +10,7 @@ namespace {
 // Helper: convert an FPDF_WCHAR buffer returned by a Pdfium getter into a
 // std::wstring.  The getter is called with a nullptr first to retrieve the
 // required buffer length (in bytes), then a second time to fill the buffer.
-std::wstring GetStructText(unsigned long (*getter)(FPDF_STRUCTELEMENT, FPDF_WCHAR*, unsigned long),
+std::wstring GetStructText(unsigned long (*getter)(FPDF_STRUCTELEMENT, void*, unsigned long),
                            FPDF_STRUCTELEMENT elem) {
     unsigned long len = getter(elem, nullptr, 0);
     if (len <= 0) {

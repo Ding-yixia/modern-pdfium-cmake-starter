@@ -4,6 +4,9 @@
 
 namespace pdfium {
 
+class Dest;
+class Action;
+
 class Link {
 public:
     std::unique_ptr<Dest> GetDest(const Document& doc) const;

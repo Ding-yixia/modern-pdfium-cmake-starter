@@ -13,32 +13,32 @@ namespace pdfium {
 Signature::Signature(FPDF_SIGNATURE sig) : sig_(sig) {}
 
 std::vector<uint8_t> Signature::GetContents() const {
-    unsigned long out_buflen = 0;
-    if (!FPDFSignatureObj_GetContents(sig_, nullptr, 0, &out_buflen)) {
+    unsigned long out_buflen = FPDFSignatureObj_GetContents(sig_, nullptr, 0);
+    if (out_buflen == 0) {
         return {};
     }
     std::vector<uint8_t> buf(out_buflen);
-    if (!FPDFSignatureObj_GetContents(sig_, buf.data(),
-                                       static_cast<unsigned long>(buf.size()),
-                                       &out_buflen)) {
+    unsigned long actual = FPDFSignatureObj_GetContents(
+        sig_, buf.data(), static_cast<unsigned long>(buf.size()));
+    if (actual == 0) {
         return {};
     }
-    buf.resize(out_buflen);
+    buf.resize(actual);
     return buf;
 }
 
 std::vector<int> Signature::GetByteRange() const {
-    unsigned long out_buflen = 0;
-    if (!FPDFSignatureObj_GetByteRange(sig_, nullptr, 0, &out_buflen)) {
+    unsigned long out_buflen = FPDFSignatureObj_GetByteRange(sig_, nullptr, 0);
+    if (out_buflen == 0) {
         return {};
     }
     std::vector<int> buf(out_buflen);
-    if (!FPDFSignatureObj_GetByteRange(sig_, buf.data(),
-                                        static_cast<unsigned long>(buf.size()),
-                                        &out_buflen)) {
+    unsigned long actual = FPDFSignatureObj_GetByteRange(
+        sig_, buf.data(), static_cast<unsigned long>(buf.size()));
+    if (actual == 0) {
         return {};
     }
-    buf.resize(out_buflen);
+    buf.resize(actual);
     return buf;
 }
 

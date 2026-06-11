@@ -56,9 +56,7 @@ public:
     FPDF_ANNOTATION Handle() const { return annot_; }
     explicit operator bool() const { return annot_ != nullptr; }
 
-private:
-    friend class Page;
-    Annotation(FPDF_ANNOTATION annot);
+    explicit Annotation(FPDF_ANNOTATION annot);
     FPDF_ANNOTATION annot_;
 };
 

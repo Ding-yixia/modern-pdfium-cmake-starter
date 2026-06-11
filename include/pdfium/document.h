@@ -11,6 +11,7 @@ namespace pdfium {
 class FormHandle;
 class Attachment;
 class Signature;
+class Avail;
 
 class Document {
 public:
@@ -99,6 +100,7 @@ public:
     explicit operator bool() const { return doc_ != nullptr; }
 
 private:
+    friend class Avail;
     Document(FPDF_DOCUMENT doc);
     FPDF_DOCUMENT doc_;
 };

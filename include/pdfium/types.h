@@ -14,6 +14,7 @@
 #include <fpdf_signature.h>
 #include <fpdf_javascript.h>
 #include <fpdf_annot.h>
+#include <fpdf_dataavail.h>
 #include <fpdf_formfill.h>
 
 namespace pdfium {

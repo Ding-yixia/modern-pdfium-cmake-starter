@@ -298,7 +298,7 @@ int Document::GetSignatureCount() const {
 }
 
 std::unique_ptr<Signature> Document::GetSignatureObject(int index) const {
-    FPDF_SIGNATURE sig = FPDF_GetSignatureObj(doc_, index);
+    FPDF_SIGNATURE sig = FPDF_GetSignatureObject(doc_, index);
     if (!sig) {
         return nullptr;
     }

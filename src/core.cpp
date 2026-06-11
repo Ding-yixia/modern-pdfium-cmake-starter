@@ -17,8 +17,12 @@ Library::Library(const Config& config) {
     if (!global_initialized_) {
         FPDF_LIBRARY_CONFIG cfg{};
         cfg.version = config.version;
-        cfg.user_data_size = config.user_data_size;
-        cfg.user_data = const_cast<void*>(config.user_data);
+        cfg.m_pUserFontPaths = config.m_pUserFontPaths;
+        cfg.m_pIsolate = config.m_pIsolate;
+        cfg.m_v8EmbedderSlot = config.m_v8EmbedderSlot;
+        cfg.m_pPlatform = config.m_pPlatform;
+        cfg.m_RendererType = static_cast<FPDF_RENDERER_TYPE>(config.m_RendererType);
+        cfg.m_FontLibraryType = static_cast<FPDF_FONT_BACKEND_TYPE>(config.m_FontLibraryType);
         FPDF_InitLibraryWithConfig(&cfg);
         global_initialized_ = true;
         initialized_ = true;
